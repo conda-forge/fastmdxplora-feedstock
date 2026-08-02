@@ -72,6 +72,13 @@ tests:
         # If these fail the recipe has not delivered what it promises.
         - openmm
         - pdbfixer
+        # Declaring the small-molecule stack is not the same as it resolving.
+        # Importing it here means a broken solve fails the build rather than
+        # the first protein-ligand run a user attempts.
+        - openff.toolkit
+        - openmmforcefields
+        - rdkit
+        - propka
       python_version:
         - ${{ python_min }}.*
         - "*"
