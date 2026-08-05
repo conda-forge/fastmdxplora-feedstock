@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fastmdxplora
-  version: "2.2.0"
+  version: "2.3.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: f3f2d3b31da6138de7262a07ea52002a8a95789ef0cd1b10ca4451d7ff20cc58
+  sha256: 8e05f86e89da2c76775a8f5101365b1c4d44841297d689fb484ea7326c0a2df5
 
 build:
   noarch: python
@@ -59,6 +59,12 @@ requirements:
     - openmmforcefields >=0.12
     - rdkit >=2023.3
     - propka >=3.5
+    # The report as a PDF as well as Markdown. On PyPI these are the [pdf]
+    # extra, because WeasyPrint there needs Pango and Cairo installed
+    # separately; the conda-forge package brings its own, so a conda install
+    # gives the format with nothing further to do.
+    - weasyprint >=60
+    - markdown >=3.4
 
 tests:
   - python:
