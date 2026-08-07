@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fastmdxplora
-  version: "2.3.0"
+  version: "2.4.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 8e05f86e89da2c76775a8f5101365b1c4d44841297d689fb484ea7326c0a2df5
+  sha256: 7b0274a41cb505f75a66419950f2aef1565f01bf4cec4892bb7a6991118a669f
 
 build:
   noarch: python
@@ -65,6 +65,10 @@ requirements:
     # gives the format with nothing further to do.
     - weasyprint >=60
     - markdown >=3.4
+    # Enhanced sampling: metadynamics, umbrella sampling, steered MD. Not on
+    # PyPI at all, so this is the only distribution that can carry it, and a
+    # metadynamics run without it fails at the point of use.
+    - openmm-plumed >=1.0
 
 tests:
   - python:
@@ -117,10 +121,10 @@ about:
     Analysis computes the standard structural and dynamic metrics, along with
     protein-ligand measures when a ligand is present. Reporting packages the
     results into a written report, a slide deck, and a shareable bundle. A
-    browser interface is included for designing, starting, watching, and
+    graphical interface is included for designing, starting, watching, and
     reviewing a run.
   # The package bundles a minified build of 3Dmol.js (BSD-3-Clause) for the
-  # molecular viewer in the browser interface, so its licenses ship too.
+  # molecular viewer in the graphical interface, so its licenses ship too.
   license: MIT AND BSD-3-Clause
   license_file:
     - LICENSE
