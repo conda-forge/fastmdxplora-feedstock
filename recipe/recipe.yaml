@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fastmdxplora
-  version: "2.4.0"
+  version: "2.5.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 7b0274a41cb505f75a66419950f2aef1565f01bf4cec4892bb7a6991118a669f
+  sha256: 32ae9f6ceb5e79cc36357f1be519ec2bcae9cd28a5caf5fd4193a6616fda4a71
 
 build:
   noarch: python
