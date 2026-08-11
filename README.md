@@ -23,7 +23,7 @@ dynamics with OpenMM, including optional PLUMED enhanced sampling.
 Analysis computes the standard structural and dynamic metrics, along with
 protein-ligand measures when a ligand is present. Reporting packages the
 results into a written report, a slide deck, and a shareable bundle. A
-browser interface is included for designing, starting, watching, and
+graphical interface is included for designing, starting, watching, and
 reviewing a run.
 
 Current build status
@@ -57,31 +57,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `fastmdxplora` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install fastmdxplora
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install fastmdxplora
 ```
 
-It is possible to list all of the versions of `fastmdxplora` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add fastmdxplora
+# for installing globally
+pixi global install fastmdxplora
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `fastmdxplora` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search fastmdxplora --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search fastmdxplora --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search fastmdxplora --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -93,6 +135,8 @@ mamba repoquery whoneeds fastmdxplora --channel conda-forge
 # List dependencies of `fastmdxplora`:
 mamba repoquery depends fastmdxplora --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
