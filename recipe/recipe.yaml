@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fastmdxplora
-  version: "2.5.5"
+  version: "2.5.6"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: cf452d7df98f66161ccf1eaaed07c1aa2128b782b37e6623b49d069e5656a37c
+  sha256: f40fa48ac481c071e9068237e08ee7b9948878b9b46d2d7a5fe75b3b98741e9c
 
 build:
   noarch: python
@@ -31,7 +31,7 @@ requirements:
     # Upper bound matches requires-python in pyproject.toml; the chemistry
     # stack has no 3.14 builds yet either.
     - python >=${{ python_min }},<3.14
-    - numpy >=1.22
+    - numpy >=2.0
     - pyyaml >=6.0
     - mdtraj >=1.9.7
     - matplotlib-base >=3.5
@@ -49,7 +49,7 @@ requirements:
     # for conda. Depending on them here is the point of the conda-forge
     # distribution: one install command makes all four phases work, where the
     # PyPI package covers analysis and reporting alone.
-    - openmm >=8.0
+    - openmm >=8.2
     - pdbfixer
     # Protein-ligand systems need small-molecule parameterization, and the
     # chemistry a structure omits has to be read and its protonation settled
@@ -109,7 +109,7 @@ tests:
 
 about:
   homepage: https://github.com/aai-research-lab/FastMDXplora
-  summary: Fully Automated SysTem for Molecular Dynamics eXploration
+  summary: Software for Automated Molecular Dynamics Exploration
   description: |
     FastMDXplora runs a complete molecular dynamics study from a single
     command. Given a protein structure, or just a PDB identifier, it performs
