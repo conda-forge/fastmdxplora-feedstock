@@ -7,7 +7,7 @@ Home: https://github.com/aai-research-lab/FastMDXplora
 
 Package license: MIT AND BSD-3-Clause
 
-Summary: Fully Automated SysTem for Molecular Dynamics eXploration
+Summary: Software for Automated Molecular Dynamics Exploration
 
 Development: https://github.com/aai-research-lab/FastMDXplora
 
