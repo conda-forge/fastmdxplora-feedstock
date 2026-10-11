@@ -5,13 +5,13 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fastmdxplora-fe
 
 Home: https://github.com/aai-research-lab/FastMDXplora
 
-Package license: MIT AND BSD-3-Clause
+Package license: MIT AND Apache-2.0 AND ISC AND 0BSD AND OFL-1.1
 
 Summary: Software for Automated Molecular Dynamics Exploration
 
 Development: https://github.com/aai-research-lab/FastMDXplora
 
-Documentation: https://fastmdxplora.readthedocs.io/
+Documentation: https://fastmdxplora.readthedocs.io/en/stable/
 
 FastMDXplora runs a complete molecular dynamics study from a single
 command. Given a protein structure, or just a PDB identifier, it performs
